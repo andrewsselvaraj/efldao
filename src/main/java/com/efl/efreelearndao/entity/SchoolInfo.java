@@ -1,10 +1,10 @@
-package com.efl.efreelearndao.model;
+package com.efl.efreelearndao.entity;
 
 import javax.persistence.*;
 
 @Entity
 @Table (name="school_info")
-public class SchoolInfo {
+public class 	SchoolInfo {
 	@Id
 	@Column (name="pk_SchoolId", nullable=false)
 	int pk_SchoolId;

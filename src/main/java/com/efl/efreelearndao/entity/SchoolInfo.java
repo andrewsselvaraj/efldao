@@ -40,6 +40,44 @@ public class 	SchoolInfo {
 	String lastupdateed;
 	@Column (name="status", nullable=false)
 	String status;
+	
+	//
+	public SchoolInfo(	int pk_SchoolId,	String user_name,	String password,	String SchoolName,		String PrincipalName,		String SchoolAddress,		String City,	String State,		String Country,		String Pincode,	String Email,	String WebSite,	String ContactNo,	String createdby,		String lastupdatedby,		String lastupdateed,	String status)
+	{
+
+		this.pk_SchoolId=pk_SchoolId;
+
+		 this.user_name=user_name;
+
+		  this.SchoolName=SchoolName;
+
+	 this.PrincipalName=PrincipalName;
+
+		  this.SchoolAddress=SchoolAddress;
+
+		  this.City=City;
+
+		  this.State=State;
+
+		  this.Country=Country;
+
+		  this.Pincode=Pincode;
+
+		  this.Email=Email;
+
+  this.WebSite=WebSite;
+
+		  this.ContactNo=ContactNo;
+
+  this.createdby=createdby;
+
+  this.lastupdatedby=lastupdatedby;
+
+  this.lastupdateed=lastupdateed;
+
+		 this.status=status;
+	}
+	
 	public int getPk_SchoolId() {
 		return pk_SchoolId;
 	}

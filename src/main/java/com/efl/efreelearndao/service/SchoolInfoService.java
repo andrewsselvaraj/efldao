@@ -10,13 +10,13 @@ import com.efl.efreelearndao.entity.SchoolInfo;
 
 public interface SchoolInfoService {
 	
-	List<SchoolInfoDTO> getAllSchoolInfos();
+	List<SchoolInfo> getAllSchoolInfos();
 
-	Optional<SchoolInfoDTO> getSchoolInfoById(Long SchoolInfoId);
+	Optional<SchoolInfo> getSchoolInfoById(Long SchoolInfoId);
 
-	SchoolInfoDTO createSchoolInfo(SchoolInfo SchoolInfo);	
+	SchoolInfo createSchoolInfo(SchoolInfo SchoolInfo);	
 
-	SchoolInfoDTO updateSchoolInfo(SchoolInfo SchoolInfoDetails);
+	SchoolInfo updateSchoolInfo(SchoolInfo SchoolInfoDetails);
 
 	void deleteSchoolInfo(SchoolInfo SchoolInfo);
 }

@@ -27,10 +27,11 @@ public class SchoolInfoRestController {
 	
 	@PostMapping("/schools")
 	public SchoolInfoDTO createSchool(@Valid @RequestBody SchoolInfoDTO schoolInfoDTO) {
-		return schoolInfoService.createSchoolInfo(convertToEntity(schoolInfoDTO));
+		SchoolInfo schoolInfo = convertToEntity(schoolInfoDTO);
+		return convertToDto(schoolInfoService.createSchoolInfo(schoolInfo));
 	}
 	
-	public SchoolInfoDTO convertToDto(SchoolInfoDTO SchoolInfo) {
+	public SchoolInfoDTO convertToDto(SchoolInfo SchoolInfo) {
 		SchoolInfoDTO SchoolInfoDTO = modelMapper.map(SchoolInfo, SchoolInfoDTO.class);
 		
 		return SchoolInfoDTO;

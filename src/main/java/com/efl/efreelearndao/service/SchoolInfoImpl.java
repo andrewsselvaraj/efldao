@@ -3,33 +3,34 @@ package com.efl.efreelearndao.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.efl.efreelearndao.dto.SchoolInfoDTO;
 import com.efl.efreelearndao.entity.SchoolInfo;
 
 public class SchoolInfoImpl implements SchoolInfoService{
 
 	@Override
-	public List<SchoolInfo> getAllSchoolInfos() {
+	public List<SchoolInfoDTO> getAllSchoolInfos() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Optional<SchoolInfo> getSchoolInfoById(Long SchoolInfoId) {
+	public Optional<SchoolInfoDTO> getSchoolInfoById(Long SchoolInfoId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public SchoolInfo createSchoolInfo(SchoolInfo SchoolInfo) {
+	public SchoolInfoDTO createSchoolInfo(SchoolInfo SchoolInfo) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public SchoolInfo updateSchoolInfo(SchoolInfo SchoolInfoDetails) {
+	public SchoolInfoDTO updateSchoolInfo(SchoolInfo SchoolInfoDetails) {
 		// TODO Auto-generated method stub
-		return null;
-	}
+		this.employeeRepository.save(SchoolInfoDetails);
+		}
 
 	@Override
 	public void deleteSchoolInfo(SchoolInfo SchoolInfo) {

@@ -38,7 +38,7 @@ public class SchoolInfoRestController {
 	}
 	
 	@GetMapping("/schools")
-	public List<SchoolInfoDTO> getAllEmployees() {
+	public List<SchoolInfoDTO> getAllSchoolInfos() {
 		List<SchoolInfo> schools = schoolInfoService.getAllSchoolInfos();
 		return schools.stream()
         .map(this::convertToDto)

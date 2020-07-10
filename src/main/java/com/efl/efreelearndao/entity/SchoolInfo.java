@@ -6,17 +6,17 @@ import javax.persistence.*;
 @Table (name="school_info")
 public class 	SchoolInfo {
 	@Id
-	@Column (name="pk_SchoolId", nullable=false)
+	@Column (name="pk_Schoolid", nullable=false)
 	int pk_SchoolId;
 	@Column (name="user_name", nullable=false)
 	String user_name;
 	@Column (name="password", nullable=false)
 	String password;
-	@Column (name="SchoolName", nullable=false)
+	@Column (name="schoolname", nullable=false)
 	String SchoolName;
-	@Column (name="PrincipalName", nullable=false)
+	@Column (name="Principalname", nullable=false)
 	String PrincipalName;
-	@Column (name="SchoolAddress", nullable=false)
+	@Column (name="Schooladdress", nullable=false)
 	String SchoolAddress;
 	@Column (name="City", nullable=false)
 	String City;
@@ -28,10 +28,25 @@ public class 	SchoolInfo {
 	String Pincode;
 	@Column (name="Email", nullable=false)
 	String Email;
-	@Column (name="WebSite", nullable=false)
-	String WebSite;
-	@Column (name="ContactNo", nullable=false)
-	String ContactNo;
+	@Column (name="Website", nullable=false)
+	String website;
+	public String getWebsite() {
+		return website;
+	}
+
+	public void setWebsite(String website) {
+		this.website = website;
+	}
+
+	public 	Long getContactno() {
+		return Contactno;
+	}
+
+	public void setContactno(	Long contactno) {
+		this.Contactno = contactno;
+	}	
+	@Column (name="contactno", nullable=false)
+ Long Contactno;
 	@Column (name="createdby", nullable=false)
 	String createdby;
 	@Column (name="lastupdatedby", nullable=false)
@@ -40,9 +55,13 @@ public class 	SchoolInfo {
 	String lastupdateed;
 	@Column (name="status", nullable=false)
 	String status;
+	public SchoolInfo()
+	{
+		
+	}
 	
 	//
-	public SchoolInfo(	int pk_SchoolId,	String user_name,	String password,	String SchoolName,		String PrincipalName,		String SchoolAddress,		String City,	String State,		String Country,		String Pincode,	String Email,	String WebSite,	String ContactNo,	String createdby,		String lastupdatedby,		String lastupdateed,	String status)
+	public SchoolInfo(	int pk_SchoolId,	String user_name,	String password,	String SchoolName,		String PrincipalName,		String SchoolAddress,		String City,	String State,		String Country,		String Pincode,	String Email,	String WebSite,		Long ContactNo,	String createdby,		String lastupdatedby,		String lastupdateed,	String status)
 	{
 
 		this.pk_SchoolId=pk_SchoolId;
@@ -65,9 +84,9 @@ public class 	SchoolInfo {
 
 		  this.Email=Email;
 
-  this.WebSite=WebSite;
+  this.website=WebSite;
 
-		  this.ContactNo=ContactNo;
+		  this.Contactno=ContactNo;
 
   this.createdby=createdby;
 
@@ -144,17 +163,12 @@ public class 	SchoolInfo {
 	public void setEmail(String email) {
 		Email = email;
 	}
-	public String getWebSite() {
-		return WebSite;
+
+	public 	Long getContactNo() {
+		return Contactno;
 	}
-	public void setWebSite(String webSite) {
-		WebSite = webSite;
-	}
-	public String getContactNo() {
-		return ContactNo;
-	}
-	public void setContactNo(String contactNo) {
-		ContactNo = contactNo;
+	public void setContactNo(	Long contactNo) {
+		Contactno = contactNo;
 	}
 	public String getCreatedby() {
 		return createdby;

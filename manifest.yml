@@ -1,0 +1,8 @@
+---
+applications:
+  - name: efreelearn
+    buildpacks: 
+      - java_buildpack
+    path: target/spring-boot-jdbc-0.0.1-SNAPSHOT.war
+    services:
+      - mysql

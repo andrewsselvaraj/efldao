@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.efl.efreelearndao.dto.SchoolInfoDTO;
 import com.efl.efreelearndao.entity.SchoolInfo;
 import com.efl.efreelearndao.repository.SchoolInfoRepository;
-
+@Service
 public class SchoolInfoImpl implements SchoolInfoService{
 
 	@Autowired
@@ -16,8 +17,8 @@ public class SchoolInfoImpl implements SchoolInfoService{
 	
 	@Override
 	public List<SchoolInfo> getAllSchoolInfos() {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO Auto-generated method stubgetAllSchoolInfos
+		return this.schoolInfoRepository.findAll();
 	}
 
 	@Override

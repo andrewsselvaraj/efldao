@@ -36,6 +36,9 @@ public class 	SchoolInfoDTO {
 	String lastupdateed;
  
 	String status;
+	public SchoolInfoDTO()
+	{
+	}
 	
 	//
 	public SchoolInfoDTO(	int pk_SchoolId,	String user_name,	String password,	String SchoolName,		String PrincipalName,		String SchoolAddress,		String City,	String State,		String Country,		String Pincode,	String Email,	String WebSite,	String ContactNo,	String createdby,		String lastupdatedby,		String lastupdateed,	String status)

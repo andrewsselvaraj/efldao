@@ -4,9 +4,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.efl.efreelearndao.dto.SchoolInfoDTO;
-import com.efl.efreelearndao.entity.SchoolInfo;
+import com.efl.efreelearndao.entity.School;
 @Repository
-public interface SchoolInfoRepository extends JpaRepository<SchoolInfo,Integer>{
+public interface SchoolRepository extends JpaRepository<School,Integer>{
 	
 
   

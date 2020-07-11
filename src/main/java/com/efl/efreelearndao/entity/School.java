@@ -4,10 +4,10 @@ import javax.persistence.*;
 
 @Entity
 @Table (name="school_info")
-public class 	SchoolInfo {
+public class 	School {
 	@Id
 	@Column (name="pk_Schoolid", nullable=false)
-	int pk_SchoolId;
+	long pk_SchoolId;
 	@Column (name="user_name", nullable=false)
 	String user_name;
 	@Column (name="password", nullable=false)
@@ -55,13 +55,13 @@ public class 	SchoolInfo {
 	String lastupdateed;
 	@Column (name="status", nullable=false)
 	String status;
-	public SchoolInfo()
+	public School()
 	{
 		
 	}
 	
 	//
-	public SchoolInfo(	int pk_SchoolId,	String user_name,	String password,	String SchoolName,		String PrincipalName,		String SchoolAddress,		String City,	String State,		String Country,		String Pincode,	String Email,	String WebSite,		Long ContactNo,	String createdby,		String lastupdatedby,		String lastupdateed,	String status)
+	public School(	int pk_SchoolId,	String user_name,	String password,	String SchoolName,		String PrincipalName,		String SchoolAddress,		String City,	String State,		String Country,		String Pincode,	String Email,	String WebSite,		Long ContactNo,	String createdby,		String lastupdatedby,		String lastupdateed,	String status)
 	{
 
 		this.pk_SchoolId=pk_SchoolId;
@@ -97,10 +97,10 @@ public class 	SchoolInfo {
 		 this.status=status;
 	}
 	
-	public int getPk_SchoolId() {
+	public long getPk_SchoolId() {
 		return pk_SchoolId;
 	}
-	public void setPk_SchoolId(int pk_SchoolId) {
+	public void setPk_SchoolId(long pk_SchoolId) {
 		this.pk_SchoolId = pk_SchoolId;
 	}
 	public String getUser_name() {

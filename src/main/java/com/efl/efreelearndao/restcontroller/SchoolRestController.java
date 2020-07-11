@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.efl.efreelearndao.dto.SchoolInfoDTO;
 import com.efl.efreelearndao.entity.School;
+import com.efl.efreelearndao.exception.ResourceNotFoundException;
 import com.efl.efreelearndao.service.SchoolService;
 
 
@@ -82,6 +83,30 @@ public class SchoolRestController {
 	}
 
 
+@PutMapping("/Schools/{id}")
+	public ResponseEntity<School> updateSchool(@PathVariable(value = "id") Long SchoolId,
+			@Valid @RequestBody School SchoolDetails) throws ResourceNotFoundException {
+		School school = schoolInfoService.getSchoolInfoById(SchoolId)
+				.orElseThrow(() -> new ResourceNotFoundException("School not found for this id :: " + SchoolId));
+
+		school.setEmail(SchoolDetails.getEmail());
+
+		final School updatedSchool = schoolInfoService.updateSchoolInfo(SchoolDetails);
+		return ResponseEntity.ok(updatedSchool);
+	}
+
+	@DeleteMapping("/Schools/{id}")
+	public Map<String, Boolean> deleteSchool(@PathVariable(value = "id") Long SchoolId)
+			throws ResourceNotFoundException {
+		School School = schoolInfoService.getSchoolInfoById(SchoolId)
+				.orElseThrow(() -> new ResourceNotFoundException("School not found for this id :: " + SchoolId));
+
+		schoolInfoService.deleteSchoolInfo(School);
+		
+		Map<String, Boolean> response = new HashMap<>();
+		response.put("deleted", Boolean.TRUE);
+		return response;
+	}
 
 
 	public SchoolInfoDTO convertToDto(School SchoolInfo) {

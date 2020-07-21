@@ -1,4 +1,4 @@
-package com.efl.efreelearndao.exception;
+package com.exam.exception;
 
 import java.util.Date;
 

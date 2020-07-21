@@ -1,5 +1,5 @@
 
-package com.efl.efreelearndao;
+package com.exam;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration
 
 @EnableWebMvc
-public class EfreelearndaoApplication {
+public class ExamApplication {
 	
 	@Bean
 	public ModelMapper modelMapper() {
@@ -23,7 +23,7 @@ public class EfreelearndaoApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(EfreelearndaoApplication.class, args);
+		SpringApplication.run(ExamApplication.class, args);
 		
 	}
 

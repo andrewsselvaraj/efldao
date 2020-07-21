@@ -1,4 +1,4 @@
-package com.efl.efreelearndao.exception;
+package com.exam.exception;
 /*package net.guides.springboot2.springboot2jpacrudexample.exception;
 
 import java.util.Date;
